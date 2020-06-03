@@ -1,24 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+"SKK" app was supposed to imitate ticket buying process. Each user can browse through available tickets, but only a registered user can buy them. 
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+*03.06.2020*
+Stuck on "buying" process; can't create a new row in the Bought table.
