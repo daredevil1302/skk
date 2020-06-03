@@ -1,0 +1,62 @@
+<h1>Fresh tickets</h1>
+
+<% if current_user %>
+
+	<%= link_to 'Sign out',destroy_user_session_path, method: :delete %>
+
+	<table>
+    <thead> 
+        <tr>
+            <td>Bus</td>
+            <td>Time</td>
+            <td>Quantity</td>
+            <td>Price</td>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% @tickets.each do |ticket| %>
+        <tr>
+            <td><%= ticket.bus %></td>
+            <td><%= ticket.time %></td>
+            <td><%= ticket.quantity %></td>
+            <td><%= ticket.price %></td>
+            <td>
+                <%= button_to 'Buy', boughts_path(bought: {user_id: current_user.id, ticket_id: ticket })%>
+            </td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>
+
+<% else %>
+
+	<table>
+    <thead> 
+        <tr>
+            <td>Bus</td>
+            <td>Time</td>
+            <td>Quantity</td>
+            <td>Price</td>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% @tickets.each do |ticket| %>
+        <tr>
+            <td><%= ticket.bus %></td>
+            <td><%= ticket.time %></td>
+            <td><%= ticket.quantity %></td>
+            <td><%= ticket.price %></td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>
+
+<p>To buy tickets, sign in first</p>
+
+<%= link_to 'Sign up', new_user_registration_path %>
+
+<%= link_to 'Sign in', new_user_session_path %>
+
+<% end %>

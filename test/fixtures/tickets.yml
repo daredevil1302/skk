@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  prijevoznik: MyString
+  vrijeme: 2020-05-30 08:39:46
+  kolicina: 1
+
+two:
+  prijevoznik: MyString
+  vrijeme: 2020-05-30 08:39:46
+  kolicina: 1
